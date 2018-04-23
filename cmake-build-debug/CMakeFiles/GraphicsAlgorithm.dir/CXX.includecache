@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/Users/KsGin/Documents/GraphicsAlgorithm/Headers/DrawLine.h
+Texture.hpp
+/Users/KsGin/Documents/GraphicsAlgorithm/Headers/Texture.hpp
+
 /Users/KsGin/Documents/GraphicsAlgorithm/Headers/Model.hpp
 fstream
 -
@@ -49,4 +53,6 @@ Headers/Texture.hpp
 /Users/KsGin/Documents/GraphicsAlgorithm/Headers/Texture.hpp
 Headers/Model.hpp
 /Users/KsGin/Documents/GraphicsAlgorithm/Headers/Model.hpp
+Headers/DrawLine.h
+/Users/KsGin/Documents/GraphicsAlgorithm/Headers/DrawLine.h
 

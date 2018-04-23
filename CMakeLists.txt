@@ -7,7 +7,7 @@ add_executable(
         GraphicsAlgorithm main.cpp
         Headers/Shader.hpp
         Headers/Texture.hpp
-        Headers/Model.hpp)
+        Headers/Model.hpp Headers/DrawLine.h)
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -framework OPENGL")
 

@@ -43,12 +43,20 @@ public:
         glBindTexture(GL_TEXTURE_2D, ID);
     }
 
+    void ClearPixel(){
+        memset(data, 0, sizeof(unsigned char) * 3 * height * width);
+    }
+
     void SetPixel(int w, int h, unsigned char r, unsigned char g, unsigned char b) {
         data[width * (h - 1) * 3 + w * 3 - 2] = r;
         data[width * (h - 1) * 3 + w * 3 - 1] = g;
         data[width * (h - 1) * 3 + w * 3 - 0] = b;
         Use();
         UpdateTexture();
+    }
+
+    void Release(){
+        delete[] data;
     }
 };
 

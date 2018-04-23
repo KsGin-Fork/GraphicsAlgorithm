@@ -5,6 +5,7 @@
 #include "Headers/Shader.hpp"
 #include "Headers/Texture.hpp"
 #include "Headers/Model.hpp"
+#include "Headers/DrawLine.h"
 
 using namespace std;
 using namespace glm;
@@ -60,15 +61,17 @@ int main() {
         glslTex.Use();
         screen.Use();
 
-        for (int i = 0; i < 600; ++i) {
-            glslTex.SetPixel(100 + i , 250 , 255 , 255 , 255);
-        }
+        glslTex.ClearPixel();
+        DrawLineDDA(100 , 100 , 700 , 400 , 0 , 255 , 0 , glslTex);
+        DrawLineDDA(100 , 400 , 700 , 100 , 255 , 0 , 0 , glslTex);
 
         glDrawElements(GL_TRIANGLES , screen.IndexCount() , GL_UNSIGNED_INT , 0);
 
         glfwSwapBuffers(pWindow);
     }
 
+
+    glslTex.Release();
 
     return 0;
 }

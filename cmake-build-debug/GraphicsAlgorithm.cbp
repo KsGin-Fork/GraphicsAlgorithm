@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/KsGin/Documents/GraphicsAlgorithm/Headers/DrawLine.h">
+			<Option target="GraphicsAlgorithm"/>
+		</Unit>
 		<Unit filename="/Users/KsGin/Documents/GraphicsAlgorithm/Headers/Model.hpp">
 			<Option target="GraphicsAlgorithm"/>
 		</Unit>
