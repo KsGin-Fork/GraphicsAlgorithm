@@ -4,8 +4,8 @@
  * Date   : 2018/4/17
  */
 
-#ifndef ADVANCELIGHTING_MODEL_HPP
-#define ADVANCELIGHTING_MODEL_HPP
+#ifndef GRAPHICSALGORITHM_MODEL_HPP
+#define GRAPHICSALGORITHM_MODEL_HPP
 
 #include <fstream>
 #include <iostream>
@@ -70,4 +70,4 @@ public:
     }
 };
 
-#endif //ADVANCELIGHTING_MODEL_HPP
+#endif //GRAPHICSALGORITHM_MODEL_HPP

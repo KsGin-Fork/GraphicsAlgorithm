@@ -4,8 +4,8 @@
  * Date   : 2018/4/17
  */
 
-#ifndef ADVANCELIGHTING_TEXTURE_HPP
-#define ADVANCELIGHTING_TEXTURE_HPP
+#ifndef GRAPHICSALGORITHM_TEXTURE_HPP
+#define GRAPHICSALGORITHM_TEXTURE_HPP
 
 
 #include <string>
@@ -33,7 +33,6 @@ public:
         height = h;
         data = new unsigned char[w * h * 3];
         memset(data, 0, sizeof(unsigned char) * 3 * height * width);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
     }
 
     void UpdateTexture() {
@@ -54,4 +53,4 @@ public:
 };
 
 
-#endif //ADVANCELIGHTING_TEXTURE_HPP
+#endif

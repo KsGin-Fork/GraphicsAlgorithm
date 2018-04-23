@@ -4,8 +4,8 @@
  * Date   : 2018/4/5
  */
 
-#ifndef ADVANCELIGHTING_SHADER_HPP
-#define ADVANCELIGHTING_SHADER_HPP
+#ifndef GRAPHICSALGORITHM_SHADER_HPP
+#define GRAPHICSALGORITHM_SHADER_HPP
 
 #include <glm/glm.hpp>
 
@@ -197,4 +197,4 @@ private:
     }
 };
 
-#endif //ADVANCELIGHTING_SHADER_HPP
+#endif //GRAPHICSALGORITHM_SHADER_HPP
