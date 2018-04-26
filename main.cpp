@@ -62,8 +62,8 @@ int main() {
         screen.Use();
 
         glslTex.ClearPixel();
-        DrawLinePTP(100 , 100 , 700 , 400 , 0 , 255 , 0 , glslTex);
-        DrawLinePTP(100 , 400 , 700 , 100 , 255 , 0 , 0 , glslTex);
+        DrawLineBresenham(100 , 100 , 700 , 400 , 0 , 255 , 0 , glslTex);
+        DrawLineBresenham(100 , 400 , 700 , 100 , 255 , 0 , 0 , glslTex);
 
         glDrawElements(GL_TRIANGLES , screen.IndexCount() , GL_UNSIGNED_INT , 0);
 

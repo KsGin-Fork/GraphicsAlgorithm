@@ -7,8 +7,13 @@
 #ifndef GRAPHICSALGORITHM_DRAWLINE_H
 #define GRAPHICSALGORITHM_DRAWLINE_H
 
-
 #include "Texture.hpp"
+
+void swap(int &a, int &b) {
+    int t = a;
+    a = b;
+    b = t;
+}
 
 void DrawLineDDA(int x1, int y1, int x2, int y2,
                  unsigned char r, unsigned char g, unsigned char b,
@@ -65,6 +70,40 @@ void DrawLinePTP(int x1, int y1, int x2, int y2,
         }
         if (y1 > y2) tex.SetPixel(x + x2, y + y2, r, g, b);
         else tex.SetPixel(x + x1, y + y1, r, g, b);
+    }
+}
+
+
+void DrawLineBresenham(int x1, int y1, int x2, int y2,
+               unsigned char r, unsigned char g, unsigned char b,
+               Texture &tex) {
+    tex.SetPixel(x1, y1, r, g, b);
+    int dx = abs(x2 - x1);
+    int dy = abs(y2 - y1);
+    if (dx == 0 && dy == 0) return;
+    int flag = 0;
+    if (dx < dy) {
+        flag = 1;
+        swap(x1, y1);
+        swap(x2, y2);
+        swap(dx, dy);
+    }
+    int tx = (x2 - x1) > 0 ? 1 : -1;
+    int ty = (y2 - y1) > 0 ? 1 : -1;
+    int curx = x1;
+    int cury = y1;
+    int dS = 2 * dy;
+    int dT = 2 * (dy - dx);
+    int d = dS - dx;
+    while (curx != x2) {
+        if (d < 0) d += dS;
+        else {
+            cury += ty;
+            d += dT;
+        }
+        if (flag) tex.SetPixel(cury, curx, r, g, b);
+        else tex.SetPixel(curx, cury, r, g, b);
+        curx += tx;
     }
 }
 
